@@ -1,0 +1,25 @@
+.profile-page {
+    .left {
+        border-right: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+
+            .image {
+                height: 100%;
+            }
+        }
+
+        .btn-profile {
+            width: 150px;
+            padding: 5px;
+            font-size: 0.7rem;
+            background-color: #222;
+        }
+    }
+}

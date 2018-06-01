@@ -1,0 +1,24 @@
+.btn {
+    border-radius: 30px;
+    display: block;
+    width: 100%;
+    border: none;
+
+    padding: 16px 48px 16px 48px;
+
+    text-align: center;
+
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    transition: 0.3s;
+
+    &.btn-success {
+        background-color:#1ed760;
+
+        &:hover {
+            background-color:rgba(#1ed760,0.5);
+        }
+    }
+}
