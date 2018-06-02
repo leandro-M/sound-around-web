@@ -1,5 +1,8 @@
 # SoundAroundWeb
 
+Para você visualizar corretamente com as fontes e etc, mude a chamada das fontes do bootstrap e font-awesome para '../assets/'
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
 ## Development server

@@ -1,7 +1,7 @@
 <footer class="player-footer">
   <a (click)="togglePlayer()" href="javascript:;" class="max-and-minimize">
-    <i *ngIf="showPlayer" class="fa fa-window-minimize" data-toggle="tooltip" data-placement="top" title="Minimizar player"></i>
-    <i *ngIf="!showPlayer" class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Mostrar player"></i>
+    <i *ngIf="showPlayer" aria-hidden="true" class="fa fa-window-minimize" data-toggle="tooltip" data-placement="top" title="Minimizar player"></i>
+    <i *ngIf="!showPlayer" aria-hidden="true" class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Mostrar player"></i>
   </a>
   <div class="info">
     <figure class="cover">
@@ -21,35 +21,35 @@
   <div class="player-wrap">
     <div class="player-top">
       <a class="item" href="javacrtipt:;" data-toggle="tooltip" data-placement="top" title="Gostei">
-          <i class="fa fa-heart"></i>        
+          <i aria-hidden="true" class="fa fa-heart"></i>        
       </a>
 
       <a class="item" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Faixa anterior">
-        <i class="fa fa-step-backward"></i>
+        <i aria-hidden="true" class="fa fa-step-backward"></i>
       </a>
 
       <a class="item" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Rebobinar 10 segundos">
-        <i class="fa fa-backward"></i>
+        <i aria-hidden="true" class="fa fa-backward"></i>
       </a>
 
       <a class="item play-and-pause" href="javascript:;" *ngIf="!musicStarted" (click)="playMusic()">
-        <i class="fa fa-play"></i>
+        <i aria-hidden="true" class="fa fa-play"></i>
       </a>
 
       <a class="item play-and-pause" href="javascript:;" *ngIf="musicStarted" (click)="playMusic()">
-        <i class="fa fa-pause" data-toggle="tooltip" data-placement="top" title="Pausar música"></i>
+        <i aria-hidden="true" class="fa fa-pause" data-toggle="tooltip" data-placement="top" title="Pausar música"></i>
       </a>
 
       <a class="item" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Avançar 10 segundos">
-        <i class="fa fa-forward"></i>
+        <i aria-hidden="true" class="fa fa-forward"></i>
       </a>
 
       <a class="item" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Próxima faixa">
-        <i class="fa fa-step-forward"></i>
+        <i aria-hidden="true" class="fa fa-step-forward"></i>
       </a>
 
       <a class="item" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Compartilhar">
-        <i class="fa fa-share-alt"></i>
+        <i aria-hidden="true" class="fa fa-share-alt"></i>
       </a>
     </div>
 

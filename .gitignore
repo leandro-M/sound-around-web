@@ -7,7 +7,7 @@
 
 # dependencies
 /node_modules
-/_assets/components
+/src/sass/vendors-components
 
 # IDEs and editors
 /.idea

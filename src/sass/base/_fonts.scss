@@ -1,5 +1,5 @@
 @mixin font-face($style-name, $file, $category:"") {
-  $filepath: "./assets/fonts/" + $file;
+  $filepath: "../assets/fonts/" + $file;
   @font-face {
     font-family: "#{$style-name}";
     src: url($filepath + ".eot");
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: CircularBook;
-  src: url("./assets/fonts/circular-book.woff2");
+  src: url("../assets/fonts/circular-book.woff2");
 }
 
 @include font-face(CircularStd-Black,  CircularStd-Black, serif);

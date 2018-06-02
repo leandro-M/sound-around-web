@@ -1,0 +1,14 @@
+$colors: (
+    primary: #36474F,
+    secondary: #F54337
+);
+
+/* ========== FONTS ========== */
+$circular: CircularStd-Black;
+$circularBook: CircularBook;
+
+/* ========== MIXINS & FUNCTIONS ========== */
+// GET COLOR FROM MAP COLORS
+@function color($name) {
+    @return map-get($colors, $name);
+}
