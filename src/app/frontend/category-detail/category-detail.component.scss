@@ -1,0 +1,18 @@
+.category-detail-page {
+    .wrap-sounds {
+        margin-bottom: 1rem;
+
+        .cover-album {
+            width: 160px;
+            height: 160px;
+            
+            object-fit: cover;
+
+            border-radius: 100%;
+
+            box-shadow: -1px 2px 1px 1px rgba(#111, 0.25);
+
+            margin: 1rem 0;
+        }
+    }
+}

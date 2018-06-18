@@ -1,0 +1,68 @@
+.track-detail-page {
+    .album-cover {
+        width: 250px;
+        
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        .image {
+            height: 250px;
+        }
+
+        .artist-name {
+            font-size: 1.3rem;
+            color: rgba(#111,0.9);
+            margin: 1rem 0;
+        }
+
+        .quantity-track {
+            color: rgba(#111,0.9);
+            margin-bottom: 1rem;            
+        }
+
+        .btn {
+            height: 35px;
+            line-height: 35px;
+            font-size: 0.9rem;
+            
+            padding: 0;
+        }
+    }
+
+    .table-tracks {
+        
+        .track-selected {
+            background-color: rgba(#111,0.2);
+        }
+
+        .play {
+            color: #111;
+            text-decoration: none;
+            
+            &:hover {
+                color: rgba(#111,0.7);
+            }
+        }
+
+        .actions {
+            width: 100px;
+            text-align: center;
+
+            .item {
+                margin-right: 10px;
+
+                color: #111;
+                text-decoration: none;
+                
+                &:hover {
+                    color: rgba(#111,0.7);
+                }
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

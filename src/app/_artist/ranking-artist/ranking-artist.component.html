@@ -1,0 +1,84 @@
+<app-artist-profile></app-artist-profile>
+
+<section class="ranking-artist-page">
+
+    <div class="container">
+        <div class="wrap-ranking">
+            <h3 class="sub-title">Minha região</h3>
+
+            <div class="wrap-table row">
+                <div class="col-md-2 left">
+                    <h2 class="classification">
+                        3º
+
+                        <small class="description">Lugar</small>
+                    </h2>
+
+                    <a class="btn btn-success" href="javascript:;">lista completa</a>
+                </div>
+
+                <div class="col-md-10">
+                    <table class="table table-default">
+                        <thead>
+                            <tr>
+                                <th>Clas.</th>
+                                <th>Nome</th>
+                                <th>Visualizações</th>
+                                <th>Cidade</th>
+                                <th>Música mais ouvida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of numberIterateTest" class="{{ i == 2 ? 'row-selected' : ''}}">
+                                <td>{{i+1}}</td>
+                                <td>Nome do artista</td>
+                                <td>{{rankingTest[i]}}</td>
+                                <td>Itapetininga</td>
+                                <td>Música {{i+1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-ranking">
+                <h3 class="sub-title">Minha cidade</h3>
+    
+                <div class="wrap-table row">
+                    <div class="col-md-2 left">
+                        <h2 class="classification">
+                            4º
+    
+                            <small class="description">Lugar</small>
+                        </h2>
+    
+                        <a class="btn btn-success" href="javascript:;">lista completa</a>
+                    </div>
+    
+                    <div class="col-md-10">
+                        <table class="table table-default">
+                            <thead>
+                                <tr>
+                                    <th>Clas.</th>
+                                    <th>Nome</th>
+                                    <th>Visualizações</th>
+                                    <th>Cidade</th>
+                                    <th>Música mais ouvida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i of numberIterateTest" class="{{ i == 3 ? 'row-selected' : ''}}">
+                                    <td>{{i+1}}</td>
+                                    <td>Nome do artista</td>
+                                    <td>{{rankingTest[i]}}</td>
+                                    <td>Itapetininga</td>
+                                    <td>Música {{i+1}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>

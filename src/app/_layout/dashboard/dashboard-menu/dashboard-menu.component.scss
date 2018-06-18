@@ -1,0 +1,65 @@
+@import '~sass/helpers/variables';
+
+.side-menu {
+    width: 240px;
+    height: calc(100vh - 80px);
+    
+    position: fixed;
+    top: 80px;
+    left: 0;
+
+    background-color: #fff;
+    border-right: solid 1px #c5d6de;
+
+    .wrap {
+        padding-top: 10px;
+
+        .item {
+            .link {
+                display: flex;
+                align-items: center;
+
+                padding: 5px 10px;
+                position: relative;
+
+                color: #343434;
+                font-family: $ProximaNovaBold;
+                text-decoration: none;
+                transition: 0.3s;
+                
+                .icon {
+                    width: 30px;
+                    font-size: 1.1rem;
+                    color: #adb7be;
+                }
+
+                &:before {
+                    content: '';
+
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+
+                    margin-top: -2px;
+                    display: block;
+
+                    width: 0;
+                    height: 0;
+
+                    border-style: solid;
+                    border-width: 5px 4px 0;
+                    border-color: #adb7be transparent transparent;
+
+                    transition: all .2s ease-in-out;
+                    transform: rotate(-90deg);
+                }
+
+                &:hover {
+                    transition: 0.3s;
+                    color: #818181;
+                    background-color: rgba(#818181, .1);
+                }
+            }
+        }
+    }
+}

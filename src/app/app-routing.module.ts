@@ -2,23 +2,36 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // LAYOUTS
-import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
-import { AppLayoutComponent } from './_layout/app-layout/app-layout.component';
+import { SiteLayoutComponent } from './_layout/frontend/site-layout/site-layout.component';
+import { AppLayoutComponent } from './_layout/frontend/app-layout/app-layout.component';
+import { DashboardLayoutComponent } from './_layout/dashboard/dashboard-layout/dashboard-layout.component';
 
 // COMPONENTS
+
+// Dashboard
+import { DbHomeComponent } from './dashboard/db-home/db-home.component';
+
 // Home
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './frontend/home/home.component';
 
 // Perfil
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './frontend/profile/profile.component';
 
-// Categorias
-import { CategoriesComponent } from './categories/categories.component';
-import { CategoryDetailComponent } from './category-detail/category-detail.component';
+// Música, Categorias e perfil do artista
+import { CategoriesComponent } from './frontend/categories/categories.component';
+import { CategoryDetailComponent } from './frontend/category-detail/category-detail.component';
+import { TrackDetailComponent } from './frontend/track-detail/track-detail.component';
+import { ArtistProfileComponent } from './_artist/artist-profile/artist-profile.component';
+import { FeedArtistComponent } from './_artist/feed-artist/feed-artist.component';
+import { AlbumsArtistComponent } from './_artist/albums-artist/albums-artist.component';
+import { RankingArtistComponent } from './_artist/ranking-artist/ranking-artist.component';
+
+// Minha cidade
+import { MyCityComponent } from './frontend/city/my-city/my-city.component';
+import { TopArtistComponent } from './frontend/city/top-artist/top-artist.component';
 
 
-import { MyCityComponent } from './my-city/my-city.component';
-import { MyRegionComponent } from './my-region/my-region.component';
+import { MyRegionComponent } from './frontend/region/my-region/my-region.component';
 
 const routes: Routes = [
   {
@@ -31,34 +44,57 @@ const routes: Routes = [
       showPlayer: true
     }
   },
-  { path: 'profile',
+  {
+    path: 'profile',
     component: AppLayoutComponent,
     children: [
-      {path: '' , component: ProfileComponent}
+      { path: '' , component: ProfileComponent }
     ]
   },
-  { path: 'categories',
+  {
+    path: 'categories',
     component: AppLayoutComponent,
     children: [
-      {path: '' , component: CategoriesComponent}
+      { path: '' , component: CategoriesComponent },
+      { path: 'category-detail' , component: CategoryDetailComponent }
     ]
   },
-  { path: 'category-detail',
+  {
+    path: 'track-detail',
     component: AppLayoutComponent,
     children: [
-      {path: '' , component: CategoryDetailComponent}
+      { path: '' , component: TrackDetailComponent }
     ]
   },
-  { path: 'my-city',
+  {
+    path: 'artist-profile',
     component: AppLayoutComponent,
     children: [
-      {path: '' , component: MyCityComponent}
+      { path: '', redirectTo: 'feed-artist', pathMatch: 'full' },
+      { path: 'feed-artist', component: FeedArtistComponent },
+      { path: 'albums-artist', component: AlbumsArtistComponent },
+      { path: 'ranking-artist', component: RankingArtistComponent }
     ]
   },
-  { path: 'my-region',
+  {
+    path: 'my-city',
     component: AppLayoutComponent,
     children: [
-      {path: '' , component: MyRegionComponent}
+      { path: '' , component: MyCityComponent }
+    ]
+  },
+  {
+    path: 'my-region',
+    component: AppLayoutComponent,
+    children: [
+      { path: '' , component: MyRegionComponent }
+    ]
+  },
+  {
+    path: 'dashboard',
+    component: DashboardLayoutComponent,
+    children: [
+      { path: '' , component: DbHomeComponent }
     ]
   }
 ];

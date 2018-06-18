@@ -1,0 +1,27 @@
+<app-artist-profile></app-artist-profile>
+
+<section class="feed-artist-page">
+    <div class="container">
+        
+        <div class="wrap-sounds">
+            <h3 class="sub-title">Músicas recentes</h3>
+            <div class="row">
+                <a routerLink="/track-detail" class="col-md-2" *ngFor="let i of numberIterateTest">
+                    <img class="cover-album" src="/assets/img/placeholder.png" alt="">
+                    <p class="text-center">Nome da música</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="wrap-sounds">
+            <h3 class="sub-title">Últimos álbuns</h3> 
+
+            <div class="row">
+                <a routerLink="./category-detail" class="col-md-2" *ngFor="let i of numberIterateTest">
+                    <img src="/assets/img/placeholder.png" alt="">
+                    <p class="text-center">Rock</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

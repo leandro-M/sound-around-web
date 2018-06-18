@@ -3,4 +3,14 @@
     text-transform: uppercase;
 
     margin: 50px 0 30px;
+
+    &.--sub {
+        border-bottom: 1px solid #111;
+        margin: {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+        }
+    }
 }

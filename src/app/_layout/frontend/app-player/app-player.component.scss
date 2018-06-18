@@ -1,0 +1,152 @@
+@import '~sass/helpers/variables';
+ 
+.player-footer {
+	width: 100%;
+	height: 80px;
+
+	transition: 0.3s;
+	
+	padding: 0 30px;
+
+	position: fixed;   
+	bottom: 0;
+
+	display: flex;
+	align-items: center;
+
+	background-color: #111;
+
+	&.closed { bottom: -80px; }
+
+	.max-and-minimize {
+		position: absolute;
+		top: -30px;
+		right: 5px;
+		
+		height: 30px;
+		padding: 0 10px;
+
+		display: flex;
+		align-items: center;	
+		justify-content: center;
+
+		background-color: #111;
+		color: #fff;
+
+		text-decoration: none;
+	}
+
+	.info {
+		width: 25%;
+		font-family: $circularBook;
+		color: rgba(#fff,0.8);
+
+		display: flex; 
+		height: 60px;
+
+		.cover {
+			width: 60px;
+			height: 100%;
+
+			border-radius: 100%;
+			overflow: hidden;
+
+			margin-right: 10px;
+			.img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.wrap {
+			width: calc(100% - 70px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.sound-name {
+				font-size: 1rem;
+			}
+	
+			.sound-description {
+				font-size: 0.7rem;
+			}
+
+			.sound-name,
+			.sound-description {
+				width: 100%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.player-wrap {
+		width: 50%;
+
+		.player-top {
+			display: flex;
+			justify-content: center;
+
+			.item {
+				margin: 0 10px;
+				color: rgba(#fff,0.8);
+				font-size: 1.2rem;
+
+				&:first-of-type {
+					margin-left: 0;
+					margin-right: 40px;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+					margin-left: 40px;
+				}
+
+				&.play-and-pause { width: 20px; }
+
+				&.no-advance {
+					cursor: not-allowed;
+					color: rgba(#999,0.3);
+				}
+			}
+		}
+
+		.player-bottom {
+			margin-top: 10px;
+			display: flex;
+
+			justify-content: space-around;
+			align-items: center;
+
+			.time {
+				font-size: 0.7rem;
+				font-family: $circularBook;
+				color: rgba(#fff,0.8);
+			}
+
+			.progress-bar {
+				width: 70%;
+				height: 4px;
+
+				cursor: pointer;
+				background-color: rgba(#999,0.8);
+
+			}
+		}
+	}
+
+	.other-infos {
+		width: 25%;
+
+		
+		color: rgba(#fff,0.8);
+
+		marquee {
+			font-size: 0.7rem;
+			text-align: center;
+		}
+	}
+}
